@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router';
+import { NavLink } from 'react-router';
+import { IoCart} from "react-icons/io5";
+import { MdBookmarkAdd } from "react-icons/md";
+
 
 const Navbar = () => {
     return (
@@ -14,8 +17,10 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/">Home</NavLink>
          <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/about">About</NavLink>
-         <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/cart">Cart</NavLink>
-            <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/favorites">Favorites</NavLink>
+         <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/cart"><IoCart />
+         </NavLink>
+            <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/favorites"><MdBookmarkAdd />
+            </NavLink>
            
             </ul>
           </div>
@@ -28,8 +33,10 @@ const Navbar = () => {
         <ul className="menu gap-3 menu-horizontal px-1">
         <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/">Home</NavLink>
          <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/about">About</NavLink>
-         <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/cart">Cart</NavLink>
-            <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/favorites">Favorites</NavLink>
+         <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/cart"><IoCart size={20} />
+         </NavLink>
+            <NavLink className={({isActive})=>(isActive ? 'text-indigo-600':'')} to="/favorites"><MdBookmarkAdd size={20} />
+            </NavLink>
           
           </ul>
         </div>
